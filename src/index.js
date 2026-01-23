@@ -3,7 +3,7 @@
 
 import "./styles.css";
 import { ToDoObject } from "./toDo.js";
-import { Projects,  } from "./projects.js";
+import { Projects } from "./projects.js";
 
 
 //test to create a Project object and print its array
@@ -17,6 +17,12 @@ console.log(myItem);
 //add to do item to the projects
 
 testProject.addToDo(myItem);
+console.log(testProject);
+
+
+
+ //test the delete
+testProject.deleteToDo(myItem);
 console.log(testProject);
 
 
