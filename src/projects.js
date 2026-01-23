@@ -7,4 +7,8 @@ export class Projects{
     addToDo(toDo){
         this.toDoList.push(toDo)
     }
+
+    deleteToDo(){
+        this.toDoList.splice(indexed,1)
+    }
 }
