@@ -1,4 +1,32 @@
 /* styles.css */
-body {
-  background-color: rebeccapurple;
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 3fr;
+    height: 100vh;
+}
+
+.title{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    height: 30%;
+    
+}
+
+.project-sidebar{
+    grid-row-start: 1 ;
+    grid-row-end: 3 ;
+    background-image: linear-gradient(to left, orange, peachpuff);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.to-do-list{
+    background-color: rgb(205, 202, 202);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
