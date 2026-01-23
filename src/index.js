@@ -8,6 +8,7 @@ import { Projects } from "./projects.js";
 //app will just be one obbject that stores projects in an array and
 //displays them on the projects sidebar
 import { App } from "./app.js";
+import { displayProjects, displayTask } from "./ui.js";
 
 
 /*
@@ -32,9 +33,8 @@ defaultProject.addToDo(defaultTask4);
 projectHolder.addProject(defaultProject);
 
 
-
-projectHolder.displayProjects();
-projectHolder.displayTask();
+displayProjects(projectHolder);
+displayTask(projectHolder)
 
 
 

@@ -13,50 +13,6 @@ export class App{
         this.projectArray.splice(index, 1)
     }
 
-    displayProjects(){  
-        const projectSide = document.querySelector(".nav-project")
-        
-        projectSide.innerHTML ="";
-        this.projectArray.forEach((project) => {
-        const projectButton = document.createElement("button");
-        projectButton.classList.add("project-buttons")
-        projectButton.textContent = project.name;
-        projectSide.appendChild(projectButton);
-    });
-    }
-
-    displayTask(){
-        const taskSide = document.querySelector(".to-do-list");
-
-        taskSide.innerHTML = "";
-
-        this.projectArray.forEach((project) => {
-            const projectTitle = document.createElement("h3");
-            projectTitle.classList.add("task-title")
-            projectTitle.textContent = `To-Do list for: ${project.name}`;
-            taskSide.appendChild(projectTitle);
-
-            project.toDoList.forEach((todo) => {
-                const todoDiv = document.createElement("div");
-                todoDiv.classList.add("to-do-container");
-
-                //todo task title
-                const toDoTitle = document.createElement("h3");
-                toDoTitle.textContent = `Task: ${todo.title}`;
-                //todo task description
-                const toDoDesc = document.createElement("h3");
-                toDoDesc.textContent = `Description: ${todo.description}`;
-                //todo task date
-                const toDoDate = document.createElement("h3");
-                toDoDate.textContent = `Due Date: ${todo.dueDate}`;
-
-                todoDiv.appendChild(toDoTitle)
-                todoDiv.appendChild(toDoDesc)
-                todoDiv.appendChild(toDoDate)
-                taskSide.appendChild(todoDiv)
-            });
-        })
-
-    }
+   
 }
 

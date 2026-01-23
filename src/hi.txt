@@ -1,10 +1,8 @@
-
-    export function displayProjects(app){  
+displayProjects(){  
         const projectSide = document.querySelector(".nav-project")
         
         projectSide.innerHTML ="";
-
-        app.projectArray.forEach((project, index) => {
+        this.projectArray.forEach((project) => {
         const projectButton = document.createElement("button");
         projectButton.classList.add("project-buttons")
         projectButton.textContent = project.name;
@@ -12,11 +10,12 @@
     });
     }
 
-    export function displayTask(app){
+    displayTask(){
         const taskSide = document.querySelector(".to-do-list");
+
         taskSide.innerHTML = "";
 
-        app.projectArray.forEach((project) => {
+        this.projectArray.forEach((project) => {
             const projectTitle = document.createElement("h3");
             projectTitle.classList.add("task-title")
             projectTitle.textContent = `To-Do list for: ${project.name}`;
@@ -44,3 +43,4 @@
         })
 
     }
+}
