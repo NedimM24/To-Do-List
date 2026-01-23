@@ -32,6 +32,6 @@ body{
 }
 
 .to-do-list{
-    background-color: rgb(205, 202, 202);
+    background-color: (white);
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }

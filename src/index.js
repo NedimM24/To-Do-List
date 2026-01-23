@@ -7,7 +7,69 @@ import { Projects } from "./projects.js";
 
 //app will just be one obbject that stores projects in an array and
 //displays them on the projects sidebar
-import { App } from "./app.js";
+import { App, displayProjects } from "./app.js";
+
+
+/*
+lets create some UI. Create a default folder with a default task in array
+display task on the left project sidebar and display task in the todolist 
+content body
+*/ 
+
+
+//creating a default project/task to display
+const projectHolder = new App();
+const defaultProject = new Projects("Default");
+const defaultTask = new ToDoObject("Gym", "Go hit back and bis", "01/23/2026");
+
+defaultProject.addToDo(defaultTask);
+projectHolder.addProject(defaultProject);
+
+projectHolder.displayProjects();
+projectHolder.displayTask();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* m    basic tests housed here
 
 
 //test to create a Project object and print its array
@@ -21,13 +83,13 @@ myApp.addProject(testProject);
 myApp.addProject(testProject2)
 myApp.addProject(testProject3)
 
-myApp.dleteProject(testProject2)
+myApp.deleteProject(testProject2)
 console.log(myApp);
 
 
 
 //Create a new todo item 
-const myItem = new ToDoObject("Gym", "Go to gym, hit back and bis" ,"1/23/2026" );
+const myItem = new ToDoObject("Gym", "Go to gym, hit back and bis" ,"1/23/2026");
 console.log(myItem);
 
 //add to do item to the projects
@@ -42,9 +104,7 @@ testProject.deleteToDo(myItem);
 console.log(testProject);
 
 
-
-
-
+*/
 
 
 
