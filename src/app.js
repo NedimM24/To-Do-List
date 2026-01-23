@@ -15,6 +15,7 @@ export class App{
 
     displayProjects(){  
         const projectSide = document.querySelector(".nav-project")
+        
         projectSide.innerHTML ="";
         this.projectArray.forEach((project) => {
         const projectButton = document.createElement("button");
@@ -27,12 +28,12 @@ export class App{
     displayTask(){
         const taskSide = document.querySelector(".to-do-list");
 
-        this.displayTask.innerHTML = "";
+        taskSide.innerHTML = "";
 
         this.projectArray.forEach((project) => {
             const projectTitle = document.createElement("h3");
             projectTitle.classList.add("task-title")
-            projectTitle.textContent = `Tasks for ${project.name}`;
+            projectTitle.textContent = `To-Do list for: ${project.name}`;
             taskSide.appendChild(projectTitle);
 
             project.toDoList.forEach((todo) => {
