@@ -8,11 +8,14 @@ body{
 #container{
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 1fr 5fr;
     height: 100vh;
 }
 
 .title{
+    display: flex;
+    color: rgb(1, 1, 1);
+    justify-content: center;
     grid-column-start: 2;
     grid-column-end: 3;
     height: 30%;
@@ -20,6 +23,8 @@ body{
 }
 
 .project-sidebar{
+    text-align: center;
+    color: white;
     grid-row-start: 1 ;
     grid-row-end: 3 ;
     background-image: linear-gradient(to left, orange, peachpuff);
