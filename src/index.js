@@ -7,7 +7,7 @@ import { Projects } from "./projects.js";
 
 //app will just be one obbject that stores projects in an array and
 //displays them on the projects sidebar
-import { App, displayProjects } from "./app.js";
+import { App } from "./app.js";
 
 
 /*
@@ -25,8 +25,16 @@ const defaultTask = new ToDoObject("Gym", "Go hit back and bis", "01/23/2026");
 defaultProject.addToDo(defaultTask);
 projectHolder.addProject(defaultProject);
 
+const defaultProject2 = new Projects("work");
+const defaultTask2 = new ToDoObject("Code", "finish code", "01/27/2026");
+
+defaultProject.addToDo(defaultTask2);
+projectHolder.addProject(defaultProject2);
+
+
 projectHolder.displayProjects();
 projectHolder.displayTask();
+
 
 
 
