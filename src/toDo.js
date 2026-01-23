@@ -1,4 +1,4 @@
-export class ToDo{
+export class ToDoObject{
 
     //class will allow us to crete toDo objects to add to the project array
     //create a constructor, for now i weill leve off the notes and check list
