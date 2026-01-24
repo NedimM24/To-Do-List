@@ -11,6 +11,8 @@ import { App } from "./app.js";
 import { displayProjects, displayTask } from "./ui.js";
 
 let activeProjectIndex = 0;
+//how to index my projects
+
 
 
 
@@ -36,6 +38,17 @@ addProjectButton.addEventListener("click", () => {
     projectHolder.addProject(newProject);
     displayProjects(projectHolder)
 })
+
+const addTaskButton = document.querySelector(".add-task-button");
+addTaskButton.addEventListener("click", () => {
+    //eventually we want to store user input into a task obj
+    const defaultTask12 = new ToDoObject("Swag Surg", "Turn swag on", "01/23/2026");
+    defaultProject.addToDo(defaultTask12);
+    displayTask(projectHolder);
+
+})
+
+
 
 
 
