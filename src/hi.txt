@@ -1,8 +1,15 @@
-displayProjects(){  
+//need a renderProject function
+
+
+//Helper variable will let me link and render the todos based on the activeProject
+let activeProjectIndex = 0; 
+
+    export function displayProjects(app){  
         const projectSide = document.querySelector(".nav-project")
         
         projectSide.innerHTML ="";
-        this.projectArray.forEach((project) => {
+
+        app.projectArray.forEach((project) => {
         const projectButton = document.createElement("button");
         projectButton.classList.add("project-buttons")
         projectButton.textContent = project.name;
@@ -10,12 +17,11 @@ displayProjects(){
     });
     }
 
-    displayTask(){
+    export function displayTask(app){
         const taskSide = document.querySelector(".to-do-list");
-
         taskSide.innerHTML = "";
 
-        this.projectArray.forEach((project) => {
+        app.projectArray.forEach((project) => {
             const projectTitle = document.createElement("h3");
             projectTitle.classList.add("task-title")
             projectTitle.textContent = `To-Do list for: ${project.name}`;
@@ -43,4 +49,3 @@ displayProjects(){
         })
 
     }
-}

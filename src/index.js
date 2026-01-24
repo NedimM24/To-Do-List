@@ -20,9 +20,9 @@ let activeProjectIndex = 0;
 const projectHolder = new App();
 const defaultProject = new Projects("Default");
 const defaultTask = new ToDoObject("Gym", "Go hit back and bis", "01/23/2026");
-const defaultTask2 = new ToDoObject("Gym", "Go hit back and bis", "01/23/2026");
+
 defaultProject.addToDo(defaultTask);
-defaultProject.addToDo(defaultTask2);
+
 
 projectHolder.addProject(defaultProject);
 
