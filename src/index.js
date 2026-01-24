@@ -12,6 +12,8 @@ import { displayProjects, displayTask } from "./ui.js";
 
 let activeProjectIndex = 0;
 
+
+
 //creating a default project/task to display
 const projectHolder = new App();
 const defaultProject = new Projects("Default");
@@ -34,6 +36,8 @@ addProjectButton.addEventListener("click", () => {
     projectHolder.addProject(newProject);
     displayProjects(projectHolder)
 })
+
+
 
 
 

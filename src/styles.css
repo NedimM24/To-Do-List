@@ -13,6 +13,7 @@ body{
 }
 
 .title{
+    position: relative;
     display: flex;
     color: rgb(1, 1, 1);
     justify-content: center;
@@ -20,6 +21,25 @@ body{
     grid-column-end: 3;
     height: 30%;
     
+}
+
+.add-task-button{
+    
+    align-self: center;
+    padding: .8rem;
+    margin-top: 8rem;
+    position: absolute;
+    background-color: rgb(116, 219, 116);
+    border: none;
+    width: 10rem;
+    border-radius: 10px;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+
+.add-task-button:hover{
+    transform: scale(1.05);
 }
 
 .task-title{
