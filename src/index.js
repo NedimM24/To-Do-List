@@ -23,13 +23,11 @@ const projectHolder = new App();
 const defaultProject = new Projects("Default");
 const defaultTask = new ToDoObject("Gym", "Go hit back and bis", "01/23/2026");
 const defaultTask2 = new ToDoObject("Gym", "Go hit back and bis", "01/23/2026");
-const defaultTask3 = new ToDoObject("Gym", "Go hit back and bis", "01/23/2026");
-const defaultTask4 = new ToDoObject("Gym", "Go hit back and bis", "01/23/2026");
+
 
 defaultProject.addToDo(defaultTask);
 defaultProject.addToDo(defaultTask2);
-defaultProject.addToDo(defaultTask3);
-defaultProject.addToDo(defaultTask4);
+
 projectHolder.addProject(defaultProject);
 
 
