@@ -10,29 +10,32 @@ import { Projects } from "./projects.js";
 import { App } from "./app.js";
 import { displayProjects, displayTask } from "./ui.js";
 
-
-/*
-lets create some UI. Create a default folder with a default task in array
-display task on the left project sidebar and display task in the todolist 
-content body
-*/ 
-
+let activeProjectIndex = 0;
 
 //creating a default project/task to display
 const projectHolder = new App();
 const defaultProject = new Projects("Default");
 const defaultTask = new ToDoObject("Gym", "Go hit back and bis", "01/23/2026");
 const defaultTask2 = new ToDoObject("Gym", "Go hit back and bis", "01/23/2026");
-
-
 defaultProject.addToDo(defaultTask);
 defaultProject.addToDo(defaultTask2);
 
 projectHolder.addProject(defaultProject);
 
-
 displayProjects(projectHolder);
 displayTask(projectHolder)
+
+/*
+testing add button functionality
+*/ 
+const addProjectButton = document.querySelector(".add-project");
+addProjectButton.addEventListener("click", () => {  
+    const newProject = new Projects("test");
+    projectHolder.addProject(newProject);
+    displayProjects(projectHolder)
+})
+
+
 
 
 
