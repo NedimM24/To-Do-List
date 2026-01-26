@@ -1,4 +1,6 @@
 // Local variable to store the active project index
+
+
 let _activeProjectIndex = 0; 
 
 // Getter for activeProjectIndex
@@ -48,6 +50,9 @@ export function displayProjects(app) {
         });
     });
 }
+
+
+
 export function displayTask(app) {
     const taskSide = document.querySelector(".to-do-list");
     taskSide.innerHTML = ""; // Clear previous tasks
@@ -77,6 +82,13 @@ export function displayTask(app) {
         deleteTaskButton.classList.add("delete-task-btn");
         deleteTaskButton.textContent = "- Delete Task";
 
+
+        deleteTaskButton.addEventListener("click", () => {
+            activeProject.deleteToDo(index);
+            displayTask(app);
+            
+        })
+
         // Append the task details and delete button to the task div
         todoDiv.appendChild(toDoTitle);
         todoDiv.appendChild(toDoDesc);
@@ -86,4 +98,6 @@ export function displayTask(app) {
         // Append the task div to the task list
         taskSide.appendChild(todoDiv);
     });
+
+
 }
