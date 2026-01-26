@@ -11,8 +11,8 @@ import { displayProjects, displayTask, activeProjectIndex } from "./ui.js";
 
 //creating a default project/task to display
 const projectHolder = new App();
-const defaultProject = new Projects("Default");
-const defaultTask = new ToDoObject("Gym", "Go hit back and bis", "01/23/2026");
+const defaultProject = new Projects("Home");
+const defaultTask = new ToDoObject("Be Happy", "Smile", "Every Day");
 defaultProject.addToDo(defaultTask);
 projectHolder.addProject(defaultProject);
 
@@ -50,14 +50,22 @@ addTaskButton.addEventListener("click", () => {
 });
 
 //delete project button
-//delete onst activeProject = projectHolder.projectArray[activeProjectIndex];
+
 //deleteProject() function from function modulke
 
 const deleteProjectButton = document.querySelector(".delete-project");
-deleteProjectButton.addEventListener("click", () => {
+    deleteProjectButton.addEventListener("click", () => {
+        if(activeProjectIndex === 0){
+            alert("Cant cancel");
+            return;
+        }
     projectHolder.deleteProject(activeProjectIndex);
+
+  
     displayProjects(projectHolder);
+    displayTask(projectHolder);
 })
+
 
 
 //need to dynamically add delete button to every task

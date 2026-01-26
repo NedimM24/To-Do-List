@@ -5,6 +5,7 @@ export let activeProjectIndex = 0; // Track the currently active (selected) proj
 export function displayProjects(app) {
     const projectSide = document.querySelector(".nav-project");
 
+    
     projectSide.innerHTML = ""; // Clear previous content
 
     app.projectArray.forEach((project, index) => {
@@ -42,6 +43,7 @@ export function displayProjects(app) {
  export function displayTask(app) {
     const taskSide = document.querySelector(".to-do-list");
     taskSide.innerHTML = ""; // Clear previous tasks
+
 
     const activeProject = app.projectArray[activeProjectIndex]; // Get the active project
     const projectTitle = document.createElement("h3");
