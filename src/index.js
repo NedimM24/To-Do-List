@@ -36,6 +36,8 @@ const addTaskButton = document.querySelector(".add-task-button");
 
 addTaskButton.addEventListener("click", () => {
     // Create a new task with default values
+    //next step is to get user input for this
+
     const newTask = new ToDoObject("New Task", "No Description", "01/01/2027");
 
     // Get the active project using activeProjectIndex
@@ -43,10 +45,15 @@ addTaskButton.addEventListener("click", () => {
     
     // Add the new task to the active project's toDoList
     activeProject.addToDo(newTask);
-    
+
     // Refresh the task list for the active project
     displayTask(projectHolder);
 });
+
+//delete project button
+//delete onst activeProject = projectHolder.projectArray[activeProjectIndex];
+
+const deleteProjectButton = document.querySelector(".delete-project");
 
 
 
