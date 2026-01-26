@@ -10,12 +10,6 @@ import { Projects } from "./projects.js";
 import { App } from "./app.js";
 import { displayProjects, displayTask } from "./ui.js";
 
-let activeProjectIndex = 0;
-//how to index my projects
-
-
-
-
 //creating a default project/task to display
 const projectHolder = new App();
 const defaultProject = new Projects("Default");
@@ -47,11 +41,6 @@ addTaskButton.addEventListener("click", () => {
     displayTask(projectHolder);
 
 })
-
-
-
-
-
 
 
 
