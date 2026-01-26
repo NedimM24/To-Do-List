@@ -34,7 +34,6 @@ addProjectButton.addEventListener("click", () => {
     }
 });
 
-
 const addTaskButton = document.querySelector(".add-task-button");
 
 addTaskButton.addEventListener("click", () => {
@@ -52,12 +51,18 @@ addTaskButton.addEventListener("click", () => {
 
 //delete project button
 //delete onst activeProject = projectHolder.projectArray[activeProjectIndex];
+//deleteProject() function from function modulke
 
 const deleteProjectButton = document.querySelector(".delete-project");
+deleteProjectButton.addEventListener("click", () => {
+    projectHolder.deleteProject(activeProjectIndex);
+    displayProjects(projectHolder);
+})
 
 
 //need to dynamically add delete button to every task
 //const deletTaskButton = document.querySelector(".delete-task-button");
+//deleteTask() functioin from toDo module
 
 
 
