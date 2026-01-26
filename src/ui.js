@@ -13,11 +13,10 @@ export function displayProjects(app) {
         projectButton.textContent = project.name;
         projectSide.appendChild(projectButton);
 
-        // Initially, highlight the first project as orange
-        if (index === 0) {
-            projectButton.style.backgroundColor = "orange";
-            lastClickedButton = projectButton; // Set the first button as the last clicked
-            activeProjectIndex = 0; // Set active index to the first project
+        // Highlight the active project based on activeProjectIndex
+        if (index === activeProjectIndex) {
+            projectButton.style.backgroundColor = "orange"; // Highlight active project
+            lastClickedButton = projectButton; // Set it as the last clicked button
         }
 
         projectButton.addEventListener("click", () => {
