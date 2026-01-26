@@ -15,7 +15,7 @@ export class App {
         }
 
          // Check if the index is valid (within the array bounds)
-    if (index > 0 && index < this.projectArray.length) {
+    if (index > 0) {
         // Remove the project at the given index
         this.projectArray.splice(index, 1);
     } else {

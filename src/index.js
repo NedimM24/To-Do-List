@@ -66,8 +66,6 @@ const deleteProjectButton = document.querySelector(".delete-project");
     displayTask(projectHolder);
 })
 
-
-
 //need to dynamically add delete button to every task
 //const deletTaskButton = document.querySelector(".delete-task-button");
 //deleteTask() functioin from toDo module

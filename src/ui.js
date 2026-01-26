@@ -1,4 +1,3 @@
-
 let lastClickedButton = null; // To store the last clicked button
 export let activeProjectIndex = 0; // Track the currently active (selected) project
 
@@ -65,9 +64,15 @@ export function displayProjects(app) {
         const toDoDate = document.createElement("h3");
         toDoDate.textContent = `Due Date: ${todo.dueDate}`;
 
+        const deleteTaskButton = document.createElement("button");
+        deleteTaskButton.classList.add("delete-task-btn")
+        deleteTaskButton.textContent = "-Delete Task";
+
         todoDiv.appendChild(toDoTitle);
         todoDiv.appendChild(toDoDesc);
         todoDiv.appendChild(toDoDate);
+        todoDiv.appendChild(deleteTaskButton)
+
         taskSide.appendChild(todoDiv);
     });
 }

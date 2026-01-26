@@ -126,3 +126,14 @@ body{
     transform: scale(1.01);
 }
 
+.delete-task-btn{
+    background-color: rgb(248, 71, 71);
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+.delete-task-btn:hover{
+    background-color: red;
+}
+
