@@ -1,6 +1,5 @@
 //Entry point
 
-
 import "./styles.css";
 import { ToDoObject } from "./toDo.js";
 import { Projects } from "./projects.js";
@@ -8,7 +7,7 @@ import { Projects } from "./projects.js";
 //app will just be one obbject that stores projects in an array and
 //displays them on the projects sidebar
 import { App } from "./app.js";
-import { displayProjects, displayTask } from "./ui.js";
+import { displayProjects, displayTask, activeProjectIndex } from "./ui.js";
 
 //creating a default project/task to display
 const projectHolder = new App();
@@ -34,14 +33,20 @@ addProjectButton.addEventListener("click", () => {
 })
 
 const addTaskButton = document.querySelector(".add-task-button");
+
 addTaskButton.addEventListener("click", () => {
-    //eventually we want to store user input into a task obj
-    const defaultTask12 = new ToDoObject("Swag Surg", "Turn swag on", "01/23/2026");
-    defaultProject.addToDo(defaultTask12);
+    // Create a new task with default values
+    const newTask = new ToDoObject("New Task", "No Description", "01/01/2027");
+
+    // Get the active project using activeProjectIndex
+    const activeProject = projectHolder.projectArray[activeProjectIndex];
+    
+    // Add the new task to the active project's toDoList
+    activeProject.addToDo(newTask);
+    
+    // Refresh the task list for the active project
     displayTask(projectHolder);
-
-})
-
+});
 
 
 

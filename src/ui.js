@@ -1,6 +1,6 @@
 
 let lastClickedButton = null; // To store the last clicked button
-let activeProjectIndex = 0; // Track the currently active (selected) project
+export let activeProjectIndex = 0; // Track the currently active (selected) project
 
 export function displayProjects(app) {
     const projectSide = document.querySelector(".nav-project");
