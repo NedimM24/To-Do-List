@@ -14,13 +14,13 @@ export class App {
             return; // Do nothing if it's index 0
         }
 
-        // Check if the index is valid (within the array bounds)
-        if (index > 0 && index < this.projectArray.length) {
-            // Remove the project at the given index
-            this.projectArray.splice(index, 1);
-        } else {
-            // Log an error if the index is out of bounds
-            console.error("Invalid project index");
-        }
+         // Check if the index is valid (within the array bounds)
+    if (index > 0 && index < this.projectArray.length) {
+        // Remove the project at the given index
+        this.projectArray.splice(index, 1);
+    } else {
+        // Log an error if the index is out of bounds
+        console.error("Invalid project index");
     }
+}
 }

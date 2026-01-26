@@ -111,10 +111,6 @@ const deleteProjectButton = document.querySelector(".delete-project");
 
 
 
-
-
-
-
 /* m    basic tests housed here
 
 
