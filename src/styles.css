@@ -131,9 +131,11 @@ body{
     border: none;
     border-radius: 10px;
     color: white;
+    padding: .6rem;
 }
 
 .delete-task-btn:hover{
     background-color: red;
+    font-weight: bolder;
 }
 

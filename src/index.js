@@ -1,15 +1,10 @@
-//Entry point
-
 import "./styles.css";
 import { ToDoObject } from "./toDo.js";
 import { Projects } from "./projects.js";
-
-//app will just be one obbject that stores projects in an array and
-//displays them on the projects sidebar
 import { App } from "./app.js";
-import { displayProjects, displayTask, activeProjectIndex } from "./ui.js";
+import { displayProjects, displayTask, getActiveProjectIndex, setActiveProjectIndex } from "./ui.js";
 
-//creating a default project/task to display
+// Creating a default project/task to display
 const projectHolder = new App();
 const defaultProject = new Projects("Home");
 const defaultTask = new ToDoObject("Be Happy", "Smile", "Every Day");
@@ -27,49 +22,55 @@ addProjectButton.addEventListener("click", () => {
     projectHolder.addProject(newProject);
     displayProjects(projectHolder);
 
-    // After adding a new project, set the active project index to the newly added one
-    const activeProjectButton = document.querySelectorAll(".project-buttons")[activeProjectIndex];
+    // After adding a new project, keep the last clicked project highlighted
+    const activeProjectButton = document.querySelectorAll(".project-buttons")[getActiveProjectIndex()];
     if (activeProjectButton) {
         activeProjectButton.style.backgroundColor = "orange"; // Keep the last clicked project highlighted
     }
 });
-
 const addTaskButton = document.querySelector(".add-task-button");
-
 addTaskButton.addEventListener("click", () => {
     // Create a new task with default values
-    //next step is to get user input for this
-
     const newTask = new ToDoObject("New Task", "No Description", "01/01/2027");
-    // Get the active project using activeProjectIndex
-    const activeProject = projectHolder.projectArray[activeProjectIndex];
+
+    // Get the active project using the activeProjectIndex
+    const activeProject = projectHolder.projectArray[getActiveProjectIndex()];
+
     // Add the new task to the active project's toDoList
     activeProject.addToDo(newTask);
+
     // Refresh the task list for the active project
     displayTask(projectHolder);
 });
 
-//delete project button
-
-//deleteProject() function from function modulke
-
+// Delete project button functionality
 const deleteProjectButton = document.querySelector(".delete-project");
-    deleteProjectButton.addEventListener("click", () => {
-        if(activeProjectIndex === 0){
-            alert("Cant cancel");
-            return;
-        }
-    projectHolder.deleteProject(activeProjectIndex);
+deleteProjectButton.addEventListener("click", () => {
+    // Get the current active project index
+    const activeProjectIndex = getActiveProjectIndex();
 
-  
+    // If the active project is the first (default) project, don't allow deletion
+    if (activeProjectIndex === 0) {
+        alert("Cannot delete the default project!");
+        return;
+    }
+
+    // Delete the project at the activeProjectIndex
+    projectHolder.deleteProject(activeProjectIndex);
+    
+
+    // If the active project was deleted, set the active project to index 0
+    // Ensure that the activeProjectIndex doesn't go out of bounds
+    if (activeProjectIndex >= projectHolder.projectArray.length) {
+        setActiveProjectIndex(projectHolder.projectArray.length - 1);
+    } else {
+        setActiveProjectIndex(activeProjectIndex);
+    }
+
+    // Re-render the project and task list
     displayProjects(projectHolder);
     displayTask(projectHolder);
-})
-
-//need to dynamically add delete button to every task
-//const deletTaskButton = document.querySelector(".delete-task-button");
-//deleteTask() functioin from toDo module
-
+});
 
 
 
