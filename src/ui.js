@@ -51,8 +51,6 @@ export function displayProjects(app) {
     });
 }
 
-
-
 export function displayTask(app) {
     const taskSide = document.querySelector(".to-do-list");
     taskSide.innerHTML = ""; // Clear previous tasks
