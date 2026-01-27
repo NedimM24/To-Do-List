@@ -105,9 +105,6 @@ body{
     transform: scale(1.05);
 }
 
-
-
-
 .project-buttons:hover{
     transform: scale(1.1);
 }
@@ -138,4 +135,47 @@ body{
     background-color: red;
     font-weight: bolder;
 }
+
+/*Add Project Dialog*/
+
+#add-project-dialog{
+    justify-self: center;
+    align-self: center;
+    padding: 3rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 1em rgba(34, 33, 31, 0.765);
+}
+
+#add-project-dialog::backdrop {
+    background: rgb(0, 0, 0 / .8);
+    
+}
+
+.cancel-project{
+    background-color: rgb(248, 71, 71);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: .3rem;
+    font-size: large;
+}
+
+.submit-project{
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(116, 219, 116);
+    color: white;
+    padding: .3rem;
+    font-size: large;
+}
+
+.cancel-project:hover,
+.submit-project:hover{
+  transform: scale(1.03);
+}
+
+
+/*Add task Dialog*/
+
 

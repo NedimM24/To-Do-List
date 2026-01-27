@@ -1,3 +1,8 @@
+//NEDIM MULAHUSIC
+//ENTY POINT
+//THIS MODULE CREATES THE APP THAT HOLDS THE PROJECTS IN AN ARRAY
+//THIS MODULE ALSO HANDLES BUTTONS THAT ADD NEW TASKS AND PROJECTS + DIALOG AND FORM FOR USER INPUT
+
 import "./styles.css";
 import { ToDoObject } from "./toDo.js";
 import { Projects } from "./projects.js";
@@ -18,7 +23,7 @@ displayTask(projectHolder);
 
 // Testing add button functionality
 //Project dialog buttons
-
+//START ADD PROJECT FUNCTIONALITY AND DIALOG FORM
 const projectDialog = document.querySelector("#add-project-dialog");
 const submitProjectBtn = document.querySelector(".submit-project");
 
@@ -33,7 +38,6 @@ addProjectButton.addEventListener("click", () => {
         activeProjectButton.style.backgroundColor = "orange"; // Keep the last clicked project highlighted
     }
 });
-
 submitProjectBtn.addEventListener("click", function(e) {
     e.preventDefault();
     var projectName = document.getElementById("projectName").value;
@@ -41,10 +45,11 @@ submitProjectBtn.addEventListener("click", function(e) {
     projectHolder.addProject(newProject);
 
     projectDialog.close();
-    document.getElementById("projectName").value = "";
+    document.getElementById("projectName").value = ""; //Clear the form
 
     displayProjects(projectHolder);
 })
+//END ADD PROJECT FUNCTIONALITY AND DIALOG FORM
 
 const addTaskButton = document.querySelector(".add-task-button");
 addTaskButton.addEventListener("click", () => {
