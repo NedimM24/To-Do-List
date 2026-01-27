@@ -48,23 +48,42 @@ submitProjectBtn.addEventListener("click", function(e) {
     document.getElementById("projectName").value = ""; //Clear the form
 
     displayProjects(projectHolder);
-})
+});
 //END ADD PROJECT FUNCTIONALITY AND DIALOG FORM
+
+
+//START ADD TASK FUNCTIONALITY AND DIALOG FORM
+const taskDialog = document.querySelector("#add-task-dialog");
+const taskForm = document.querySelector("#task-form")
 
 const addTaskButton = document.querySelector(".add-task-button");
 addTaskButton.addEventListener("click", () => {
-    // Create a new task with default values
-    const newTask = new ToDoObject("New Task", "No Description", "01/01/2027");
+    taskDialog.showModal();
+});
 
+taskForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    var taskName = document.getElementById("task-name").value;
+    var taskDesc = document.getElementById("task-desc").value;
+    var taskDate = document.getElementById("task-date").value;
+    // Create a new task with default values
+    const newTask = new ToDoObject(taskName, taskDesc, taskDate);
     // Get the active project using the activeProjectIndex
     const activeProject = projectHolder.projectArray[getActiveProjectIndex()];
-
     // Add the new task to the active project's toDoList
     activeProject.addToDo(newTask);
-
     // Refresh the task list for the active project
+
     displayTask(projectHolder);
+
+    document.getElementById("task-name").value = "";
+    document.getElementById("task-desc").value = "";
+    document.getElementById("task-date").value = "";
+
+    
+    taskDialog.close();
 });
+//END ADD TASK FUNCTIONALITY AND DIALOG FORM
 
 // Delete project button functionality
 const deleteProjectButton = document.querySelector(".delete-project");

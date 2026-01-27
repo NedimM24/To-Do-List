@@ -22,10 +22,21 @@
 
     <!-- dialog for adding projects -->
      <dialog id="add-task-dialog">
-            <form action="">
+            <form id="task-form">
+
+                <label for="taskName">Task Name:</label>
+                <input type="text" id="task-name" name="Task Name" required>
+
+                <label for="taskDesc">Task Description:</label>
+                <input type="text" id="task-desc" name="Task Description" required>
+
+                <label for="taskDate">Due Date:</label>
+                <input type="text" id="task-date" name="Task Date" required>
+
+                <button class="cancel-task" value="cancel" formmethod="dialog">Cancel</button>
+                <button type="submit" class="submit-task">Submit</button>
 
                   
-                    
             </form>
     </dialog>
 
