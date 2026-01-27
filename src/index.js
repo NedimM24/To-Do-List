@@ -55,6 +55,14 @@ submitProjectBtn.addEventListener("click", function(e) {
 //START ADD TASK FUNCTIONALITY AND DIALOG FORM
 const taskDialog = document.querySelector("#add-task-dialog");
 const taskForm = document.querySelector("#task-form")
+ //need to give cancel button functionality
+ const cancelTaskBtn = document.querySelector(".cancel-task");
+ cancelTaskBtn.addEventListener("click", () => {
+    taskDialog.close();
+    document.getElementById("task-name").value = "";
+    document.getElementById("task-desc").value = "";
+    document.getElementById("task-date").value = "";
+ })
 
 const addTaskButton = document.querySelector(".add-task-button");
 addTaskButton.addEventListener("click", () => {
