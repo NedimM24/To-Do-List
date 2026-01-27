@@ -15,26 +15,36 @@ projectHolder.addProject(defaultProject);
 displayProjects(projectHolder);
 displayTask(projectHolder);
 
+
 // Testing add button functionality
+//Project dialog buttons
+
+const projectDialog = document.querySelector("#add-project-dialog");
+const submitProjectBtn = document.querySelector(".submit-project");
+
+
 const addProjectButton = document.querySelector(".add-project");
 addProjectButton.addEventListener("click", () => {
-    const newProject = new Projects("New Project");
-    projectHolder.addProject(newProject);
-    displayProjects(projectHolder);
-
+    projectDialog.showModal();
+    
     // After adding a new project, keep the last clicked project highlighted
     const activeProjectButton = document.querySelectorAll(".project-buttons")[getActiveProjectIndex()];
     if (activeProjectButton) {
         activeProjectButton.style.backgroundColor = "orange"; // Keep the last clicked project highlighted
     }
 });
+
+submitProjectBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    var projectName = document.getElementById("projectName").value;
+    const newProject = new Projects(projectName);
+    projectHolder.addProject(newProject);
+    displayProjects(projectHolder);
+})
+
 const addTaskButton = document.querySelector(".add-task-button");
 addTaskButton.addEventListener("click", () => {
-
-
-
     // Create a new task with default values
-    //replace these arg with user input after we save user input into variables
     const newTask = new ToDoObject("New Task", "No Description", "01/01/2027");
 
     // Get the active project using the activeProjectIndex
@@ -75,9 +85,6 @@ deleteProjectButton.addEventListener("click", () => {
     displayProjects(projectHolder);
     displayTask(projectHolder);
 });
-
-
-
 
 
 

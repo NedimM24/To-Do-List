@@ -7,6 +7,18 @@
 </head>
 <body>
 
+    <dialog id="add-project-dialog">
+                <form action="">
+
+                    <label for="project-name">Project Name?</label>
+                    <input type="text" id="projectName" name="Project Name" required>
+
+                    <button value="cancel" formmethod="dialog">Cancel</button>
+                    <button type="submit" class="submit-project">Submit</button>
+                    
+                </form>
+            </dialog>
+
     <!-- main container -->
     <div id="container">
 
@@ -30,23 +42,7 @@
         <div class="to-do-list">
 
             <!-- Dialog form for submit task -->            
-            <dialog id="add-project-dialog">
-                <form action="">
-
-                    <label for="taskName">Task</label>
-                    <input type="text" id="name" name="task name" required>
-
-                    <label for="taskDesc">Description</label>
-                    <input type="text" id="description" name="task description" required>
-
-                     <label for="taskDate">Due Date:</label>
-                     <input type="date" id="date" name="task date" required>
-
-                     <button value="cancel" formmethod="dialog">Cancel</button>
-                     <button class="submit">Submit</button>
-
-                </form>
-            </dialog>
+            
            
         </div>
 
