@@ -39,6 +39,10 @@ submitProjectBtn.addEventListener("click", function(e) {
     var projectName = document.getElementById("projectName").value;
     const newProject = new Projects(projectName);
     projectHolder.addProject(newProject);
+
+    projectDialog.close();
+    document.getElementById("projectName").value = "";
+
     displayProjects(projectHolder);
 })
 
