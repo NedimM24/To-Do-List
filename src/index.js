@@ -30,7 +30,11 @@ addProjectButton.addEventListener("click", () => {
 });
 const addTaskButton = document.querySelector(".add-task-button");
 addTaskButton.addEventListener("click", () => {
+
+
+
     // Create a new task with default values
+    //replace these arg with user input after we save user input into variables
     const newTask = new ToDoObject("New Task", "No Description", "01/01/2027");
 
     // Get the active project using the activeProjectIndex
