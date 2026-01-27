@@ -138,7 +138,8 @@ body{
 
 /*Add Project Dialog*/
 
-#add-project-dialog{
+#add-project-dialog,
+#add-task-dialog{
     justify-self: center;
     align-self: center;
     padding: 3rem;
@@ -152,7 +153,8 @@ body{
     
 }
 
-.cancel-project{
+.cancel-project,
+.cancel-task{
     background-color: rgb(248, 71, 71);
     border: none;
     border-radius: 10px;
@@ -161,7 +163,8 @@ body{
     font-size: large;
 }
 
-.submit-project{
+.submit-project,
+.submit-task{
     border: none;
     border-radius: 10px;
     background-color: rgb(116, 219, 116);
@@ -171,11 +174,34 @@ body{
 }
 
 .cancel-project:hover,
-.submit-project:hover{
+.submit-project:hover,
+.cancel-task:hover,
+.submit-task:hover{
   transform: scale(1.03);
 }
 
 
 /*Add task Dialog*/
+
+#task-form{
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+#add-task-dialog::backdrop {
+    background: rgb(0, 0, 0 / .8);   
+}
+
+.submit-task,
+.cancel-task{
+    padding: .5rem;
+    width: 70%;
+}
+
+
 
 
