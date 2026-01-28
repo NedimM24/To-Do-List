@@ -113,6 +113,7 @@ body{
 /* To-do-list tasks */
 .to-do-container{
     margin: 1rem;
+    margin-right: 1.3rem;
     border: solid 2.5px orange;
     padding: .5rem;
     border-radius: 10px;
