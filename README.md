@@ -32,6 +32,7 @@ Tech Stack
 
 
 Usage
+
 Adding a Project
 
 Click the + Add Project button on the left sidebar.
@@ -39,6 +40,9 @@ Click the + Add Project button on the left sidebar.
 A dialog will appear where you can input the name of the new project.
 
 Click Submit to add the project to your list.
+
+<img width="2552" height="1110" alt="image" src="https://github.com/user-attachments/assets/edb023a7-e04e-4a60-9dc0-eecec8f40ba6" />
+
 
 Adding a Task
 
@@ -48,9 +52,16 @@ Click + Add Task to open the task creation dialog.
 
 Enter a task title, description, and due date, then click Submit to add the task to the active project.
 
+<img width="2559" height="1111" alt="image" src="https://github.com/user-attachments/assets/c2ff5b8f-587f-4b59-a0f7-5e1ec2d10cac" />
+
+
 Deleting a Task
 
 To delete a task, click the - Delete Task button next to the task. The task will be removed from the project.
+<img width="1331" height="576" alt="image" src="https://github.com/user-attachments/assets/9ead6abe-6a6b-49df-a6dd-e5d40cc1b814" />
+<img width="2554" height="1103" alt="image" src="https://github.com/user-attachments/assets/ce505fdb-51db-4c0c-b6a7-83e5ab2d0f0c" />
+
+
 
 Deleting a Project
 
