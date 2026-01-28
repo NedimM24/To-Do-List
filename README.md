@@ -1,6 +1,5 @@
 # To-Do-List
 
-To-Do List Project
 
 This is a To-Do List application built with ES6 modules, Webpack, and npm modules. It allows users to create projects, add tasks, and organize them with due dates and descriptions.
 
@@ -8,8 +7,8 @@ This is a To-Do List application built with ES6 modules, Webpack, and npm module
 <img width="2555" height="1109" alt="image" src="https://github.com/user-attachments/assets/01826213-6bf4-4e92-b15a-fbf315782433" />
 
 
-Features
 
+Features
 - Project Management: Create and delete projects.
 
 - Task Management: Add tasks with a title, description, and due date.
