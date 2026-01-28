@@ -29,3 +29,31 @@ Tech Stack
 - Webpack (for module bundling)
 
 - npm Modules
+
+
+Usage
+Adding a Project
+
+Click the + Add Project button on the left sidebar.
+
+A dialog will appear where you can input the name of the new project.
+
+Click Submit to add the project to your list.
+
+Adding a Task
+
+Select a project from the left sidebar.
+
+Click + Add Task to open the task creation dialog.
+
+Enter a task title, description, and due date, then click Submit to add the task to the active project.
+
+Deleting a Task
+
+To delete a task, click the - Delete Task button next to the task. The task will be removed from the project.
+
+Deleting a Project
+
+To delete a project, select the project from the left sidebar and click the - Delete Project button.
+
+Note: The default project (Home) cannot be deleted.
