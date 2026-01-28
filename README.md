@@ -1,7 +1,7 @@
 # To-Do-List
 
 
-This is a To-Do List application built with ES6 modules, Webpack, and npm modules. It allows users to create projects, add tasks, and organize them with due dates and descriptions.
+This is a simple to-do list application that allows users to create and manage tasks within different projects. The app is built using Webpack, ES6 modules, and npm modules. It features a user-friendly interface for adding projects and tasks, and provides functionality to display, delete, and manage these items.
 
 
 <img width="2555" height="1109" alt="image" src="https://github.com/user-attachments/assets/01826213-6bf4-4e92-b15a-fbf315782433" />
@@ -17,3 +17,15 @@ Features
 
 - Active Project Highlighting: The active project is visually highlighted to help users stay organized.
 
+
+Tech Stack
+
+- HTML5
+
+- CSS3 (for styling)
+
+- JavaScript (ES6)
+
+- Webpack (for module bundling)
+
+- npm Modules
