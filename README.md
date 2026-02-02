@@ -53,7 +53,7 @@ Click + Add Task to open the task creation dialog.
 Enter a task title, description, and due date, then click Submit to add the task to the active project.
 
 <img width="2559" height="1111" alt="image" src="https://github.com/user-attachments/assets/c2ff5b8f-587f-4b59-a0f7-5e1ec2d10cac" />
-<img width="2557" height="1111" alt="image" src="https://github.com/user-attachments/assets/77e06b6b-5a07-41b0-a587-56550ba7a3ab" />
+<img width="2556" height="1131" alt="image" src="https://github.com/user-attachments/assets/f14dfb9c-5776-4edd-b4bc-efeed1d5d3e5" />
 
 
 
